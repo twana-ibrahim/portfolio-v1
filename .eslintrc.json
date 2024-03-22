@@ -1,0 +1,14 @@
+{
+  "extends": ["eslint:recommended", "next/core-web-vitals"],
+  "rules": {
+    "semi": "error",
+    "camelcase": "warn",
+    "quotes": ["warn", "double"],
+    "default-case": "warn",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "no-duplicate-imports": "error",
+    "no-empty-function": "error",
+    "no-extra-semi": "warn"
+  }
+}
