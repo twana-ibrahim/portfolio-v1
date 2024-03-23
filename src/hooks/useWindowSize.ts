@@ -20,23 +20,27 @@ const getScreenType: (width: number) => ScreenType = (width) => {
 
 const useWindowSize = () => {
   const [size, setSize] = useState<SizeType>({
-    width: window.innerWidth,
-    height: window.innerHeight,
-    screen: getScreenType(window.innerWidth),
+    width: typeof window !== "undefined" ? window.innerWidth : 0,
+    height: typeof window !== "undefined" ? window.innerHeight : 0,
+    screen: getScreenType(
+      typeof window !== "undefined" ? window.innerWidth : 0
+    ),
   });
 
   useEffect(() => {
-    const handleResize = () => {
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-        screen: getScreenType(window.innerWidth),
-      });
-    };
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+          screen: getScreenType(window.innerWidth),
+        });
+      };
 
-    window.addEventListener("resize", handleResize);
+      window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   return size;
