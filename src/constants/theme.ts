@@ -7,6 +7,7 @@ export const themeToggleIconSize: { [S in ScreenType]: number } = {
   sm: 40,
   md: 40,
   lg: 18,
-  xl: 18,
-  "2xl": 18,
+  xl: 20,
+  "2xl": 20,
+  "3xl": 28,
 };

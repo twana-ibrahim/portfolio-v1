@@ -20,6 +20,11 @@ const config: Config = {
         secondary: "rgb(var(--color-secondary) / <alpha-value>)",
         ternary: "rgb(var(--color-ternary) / <alpha-value>)",
       },
+      screens: {
+        xs: "420px",
+        sm: "540px",
+        "3xl": "1650px",
+      },
     },
   },
   plugins: [],
