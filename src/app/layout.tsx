@@ -2,7 +2,9 @@ import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
+import SplashScreen from "@/components/SplashScreen";
+import ThemeProvider from "@/providers/Theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,17 +19,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        {/* use these modes */}
-        {/* light: from: #eff6ff , to: #fee2e2, link: video tutorial */}
-        {/* light-green: from: #E4E4D0 , to: #94A684, link: https://colorhunt.co/palette/94a684aec3aee4e4d0ffeef4 */}
-        {/* dark: from: #7077A1 , to: #2D3250, link: https://colorhunt.co/palette/2d32504247697077a1f6b17a */}
-        {/* dark-green: from: #739072 , to: #3A4D39 , link: https://colorhunt.co/palette/ece3ce7390724f6f523a4d39 */}
-        <div className="w-screen h-screen bg-gradient-to-b from-[#eff6ff] to-[#fee2e2]">
-          <Navbar />
-          {children}
-        </div>
+        <ThemeProvider>
+          <SplashScreen />
+          <div className="w-screen h-screen bg-gradient-to-b from-secondary to-ternary">
+            <div className="h-24">
+              <Navbar />
+            </div>
+            <div className="h-[cal(100vh - 6rem)]">{children}</div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

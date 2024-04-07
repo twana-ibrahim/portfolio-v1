@@ -1,3 +1,17 @@
+:root {
+  --color-brand: 14 165 233;
+
+  --color-secondary: 239 246 255;
+  --color-ternary: 254 226 226;
+}
+
+.dark {
+  /* --color-brand: 255 0 0; */
+
+  --color-secondary: 66 71 105;
+  --color-ternary: 45 50 80;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
