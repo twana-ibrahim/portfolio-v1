@@ -1,13 +1,15 @@
 :root {
-  --color-brand: 14 165 233;
+  --color-brand: 251 109 72;
 
+  --color-primary: 51 58 115;
   --color-secondary: 239 246 255;
   --color-ternary: 254 226 226;
 }
 
 .dark {
-  /* --color-brand: 255 0 0; */
+  --color-brand: 251 109 72;
 
+  --color-primary: 255 255 255;
   --color-secondary: 66 71 105;
   --color-ternary: 45 50 80;
 }
