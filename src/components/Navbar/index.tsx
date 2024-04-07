@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-      <Link href="/" className="relative z-40 w-1/3">
+      <Link href="/" className="relative z-40 w-1/4 2xl:w-1/3">
         <Logo
           size={lessThanLgScreen ? 30 : 20}
           color={isDarkMode ? "#fff" : "#000"}
@@ -37,8 +37,8 @@ const Navbar = () => {
       </Link>
 
       {((lessThanLgScreen && isMenuOpen) || !lessThanLgScreen) && (
-        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-16 lg:gap-0 w-screen lg:w-2/3 h-screen lg:h-full absolute lg:static top-0 left-0 bg-gradient-to-b lg:bg-none from-secondary to-ternary">
-          <div className="w-1/2 flex flex-col lg:flex-row items-center gap-8 lg:gap-4 text-4xl lg:text-base">
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-16 lg:gap-0 w-screen lg:w-3/4 2xl::w-2/3 h-screen lg:h-full absolute lg:static top-0 left-0 bg-gradient-to-b lg:bg-none from-secondary to-ternary">
+          <div className="w-1/2 flex flex-col lg:flex-row items-center gap-8 lg:gap-4 text-3xl md:text-4xl lg:text-xl 2xl:text-2xl">
             {menuLinks.map((link) => (
               <NavLink key={link.url} link={link} />
             ))}
