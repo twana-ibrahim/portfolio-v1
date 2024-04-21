@@ -36,3 +36,53 @@ export const platformLinks: LinkType[] = [
     icon: <FaFacebook />,
   },
 ];
+
+export const burgerMenuIconVariants = {
+  top: {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: 45,
+    },
+  },
+  center: {
+    closed: {
+      opacity: 1,
+    },
+    opened: {
+      opacity: 0,
+    },
+  },
+  bottom: {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: -45,
+    },
+  },
+};
+
+export const menuListVariants = {
+  wrapper: {
+    closed: { x: "100vw" },
+    opened: {
+      x: 0,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.25,
+      },
+    },
+  },
+  item: {
+    closed: {
+      opacity: 0,
+      x: -10,
+    },
+    opened: {
+      opacity: 1,
+      x: 0,
+    },
+  },
+};

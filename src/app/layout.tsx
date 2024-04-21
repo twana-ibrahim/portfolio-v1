@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
-          <SplashScreen />
+          {/* <SplashScreen /> */}
           <div className="w-screen h-screen bg-gradient-to-b from-secondary to-ternary">
             <div className="h-24">
               <Navbar />
