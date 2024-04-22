@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 
 import { themeToggleIconSize } from "@/constants/theme";
 import useWindowSize from "@/hooks/useWindowSize";
-import { menuListVariants } from "@/constants/navbar";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
@@ -17,7 +16,6 @@ const ThemeToggle = () => {
       onClick={() => {
         setTheme(isDarkMode ? "light" : "dark");
       }}
-      variants={menuListVariants.item}
     >
       {isDarkMode ? (
         <BsSunFill

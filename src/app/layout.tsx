@@ -2,8 +2,6 @@ import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import SplashScreen from "@/components/SplashScreen";
 import ThemeProvider from "@/providers/Theme";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,11 +20,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider>
-          {/* <SplashScreen /> */}
           <div className="w-screen h-screen bg-gradient-to-b from-secondary to-ternary">
-            <div className="h-24">
-              <Navbar />
-            </div>
+            <div className="h-24"></div>
             <div className="h-[calc(100vh-6rem)]">{children}</div>
           </div>
         </ThemeProvider>
