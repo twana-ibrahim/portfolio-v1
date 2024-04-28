@@ -1,4 +1,4 @@
-import { ScreenType } from "@/hooks/useWindowSize";
+import { ScreenType } from "@/shared/hooks/useWindowSize";
 
 export type Theme = "light" | "dark";
 
