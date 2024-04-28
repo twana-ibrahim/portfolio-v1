@@ -3,8 +3,8 @@ import { BsSunFill } from "react-icons/bs";
 import { FaMoon } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-import { themeToggleIconSize } from "@/constants/theme";
-import useWindowSize from "@/hooks/useWindowSize";
+import { themeToggleIconSize } from "@/shared/constants/theme";
+import useWindowSize from "@/shared/hooks/useWindowSize";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
