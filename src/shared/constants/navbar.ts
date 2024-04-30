@@ -43,7 +43,7 @@ export const largeScreenMenuVariants = {
       },
     },
     animate: {
-      clipPath: "circle(800px at 0 0)",
+      clipPath: "circle(1000px at 0 0)",
       x: "-50%",
       transition: {
         type: "spring",
