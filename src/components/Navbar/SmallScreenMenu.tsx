@@ -1,14 +1,18 @@
-import Logo from "@/assets/Logo";
+"use client";
+
+import { useRef } from "react";
+import Link from "next/link";
+import { useTheme } from "next-themes";
+import { motion, useCycle } from "framer-motion";
+
+import Logo from "@/components/Logo";
+
 import {
   burgerMenuIconVariants,
   smallScreenMenuVariants,
   navbarLinks,
 } from "@/shared/constants/navbar";
 import { useDimensions } from "@/shared/hooks/useDimensions";
-import { motion, useCycle } from "framer-motion";
-import { useTheme } from "next-themes";
-import Link from "next/link";
-import { useRef } from "react";
 
 const SmallScreenMenu = () => {
   const { theme } = useTheme();
@@ -53,6 +57,7 @@ const SmallScreenMenu = () => {
               <Link
                 href={link.hash}
                 className="text-gray-500 hover:text-primary"
+                onClick={() => toggleMenu()}
               >
                 {link.name}
               </Link>

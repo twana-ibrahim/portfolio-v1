@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} w-screen h-screen overflow-hidden 3xl:max-w-[1600px] bg-gradient-to-b from-secondary to-ternary to-70%`}
+        className={`${inter.className} w-screen h-screen overflow-hidden bg-gradient-to-b from-secondary to-ternary to-70%`}
       >
         <ThemeProvider>
-          <div className="w-full h-full overflow-auto">
+          <div className="w-full h-full overflow-auto pt-28">
             <Navbar />
             <div>{children}</div>
           </div>
