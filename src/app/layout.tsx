@@ -11,6 +11,13 @@ export const metadata: Metadata = {
   title: "Twana | Portfolio",
   description:
     "Twana Ibrahim is a frontend developer with over 4 years of experince.",
+  manifest: "/manifest.json",
+  keywords: ["nextjs", "nextjs13", "next13", "pwa", "next-pwa"],
+  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
+  icons: [
+    { rel: "apple-touch-icon", url: "icon-192x192.png" },
+    { rel: "icon", url: "icons/icon-128x128.png" },
+  ],
 };
 
 export default function RootLayout({
