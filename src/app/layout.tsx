@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import ThemeProvider from "@/shared/providers/Theme";
 import Navbar from "@/components/Navbar";
+import PWAModal from "@/components/Modals/PWA";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,8 @@ export default function RootLayout({
         className={`${inter.className} w-screen h-screen overflow-hidden bg-gradient-to-b from-secondary to-ternary to-70%`}
       >
         <ThemeProvider>
+          <PWAModal />
+
           <div className="w-full h-full overflow-auto pt-28">
             <Navbar />
             <div>{children}</div>
