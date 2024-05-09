@@ -1,4 +1,5 @@
-import Home from "@/components/Home";
+import Home from "@/components/Sections/Home";
+import Projects from "@/components/Sections/Projects";
 import SectionDivider from "@/components/SectionDivider";
 
 export default function Main() {
@@ -6,6 +7,7 @@ export default function Main() {
     <main className="flex flex-col items-center">
       <Home />
       <SectionDivider />
+      <Projects />
     </main>
   );
 }

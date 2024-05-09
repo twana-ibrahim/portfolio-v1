@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const nextConfig = {};
 
 const withPWA = require("next-pwa")({
   dest: "public",
@@ -6,9 +7,11 @@ const withPWA = require("next-pwa")({
   skipWaiting: true,
   reloadOnOnline: true,
   cacheOnFrontEndNav: true,
+  scope: "/app",
+  clientsClaim: true,
+  runtimeCaching: [{ handler: "CacheFirst", urlPattern: "/" }],
+  cacheId: "initial-assets",
   disable: process.env.NODE_ENV === "development",
 });
-
-const nextConfig = {};
 
 module.exports = withPWA(nextConfig);

@@ -1,5 +1,5 @@
 import React from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import ThemeProvider from "@/shared/providers/Theme";
@@ -14,11 +14,19 @@ export const metadata: Metadata = {
     "Twana Ibrahim is a frontend developer with over 4 years of experince.",
   manifest: "/manifest.json",
   keywords: ["nextjs", "nextjs13", "next13", "pwa", "next-pwa"],
-  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
   icons: [
     { rel: "apple-touch-icon", url: "icon-192x192.png" },
     { rel: "icon", url: "icons/icon-128x128.png" },
   ],
+};
+
+export const viewport: Viewport = {
+  minimumScale: 1,
+  initialScale: 1,
+  width: "device-width",
+  userScalable: false,
+  viewportFit: "cover",
+  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
 };
 
 export default function RootLayout({
@@ -32,9 +40,9 @@ export default function RootLayout({
         className={`${inter.className} w-screen h-screen overflow-hidden bg-gradient-to-b from-secondary to-ternary to-70%`}
       >
         <ThemeProvider>
-          <PWAModal />
+          {/* <PWAModal /> */}
 
-          <div className="w-full h-full overflow-auto pt-28">
+          <div className="w-full h-full overflow-auto pt-28 pb-10">
             <Navbar />
             <div>{children}</div>
           </div>

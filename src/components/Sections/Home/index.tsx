@@ -8,10 +8,9 @@ import { BsArrowRight } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 
-import AnimatedText from "../AnimatedText";
-
 import { homeVariants } from "@/shared/constants/home";
 import { differenceInCalendarYears } from "date-fns/differenceInCalendarYears";
+import AnimatedText from "@/components/AnimatedText";
 
 const Home = () => {
   const today = new Date();
@@ -26,7 +25,7 @@ const Home = () => {
     >
       <motion.div variants={homeVariants.image} className="relative">
         <Image
-          src="/assets/images/twana-profile.png"
+          src="/assets/images/home/twana-profile.png"
           alt="Twana"
           width={160}
           height={160}
