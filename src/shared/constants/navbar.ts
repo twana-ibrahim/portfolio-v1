@@ -6,7 +6,7 @@ type Link = {
 export const navbarLinks: Link[] = [
   {
     name: "Home",
-    hash: "#home",
+    hash: "",
   },
   {
     name: "Projects",

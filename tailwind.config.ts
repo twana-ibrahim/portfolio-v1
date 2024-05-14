@@ -21,6 +21,7 @@ const config: Config = {
         ternary: "rgb(var(--color-ternary) / <alpha-value>)",
       },
       screens: {
+        xxs: "400px",
         xs: "420px",
         sm: "540px",
         "3xl": "1650px",
