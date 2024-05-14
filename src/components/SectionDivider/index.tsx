@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const SectionDivider = () => {
   return (
     <motion.div
-      className="bg-brand/60 h-16 w-1 my-10 rounded-full hidden sm:block"
+      className="bg-brand/50 h-16 w-1 my-10 rounded-full hidden sm:block"
       variants={dividerVariants}
       initial="initial"
       animate="animate"

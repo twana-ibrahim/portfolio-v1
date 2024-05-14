@@ -8,10 +8,9 @@ import { BsArrowRight } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 
-import AnimatedText from "../AnimatedText";
-
 import { homeVariants } from "@/shared/constants/home";
 import { differenceInCalendarYears } from "date-fns/differenceInCalendarYears";
+import AnimatedText from "@/components/AnimatedText";
 
 const Home = () => {
   const today = new Date();
@@ -22,11 +21,11 @@ const Home = () => {
       initial="initial"
       animate="animate"
       transition={{ staggerChildren: 3 }}
-      className="lg:h-[calc(100vh-7rem)] py-10 sm:py-3 lg:py-0 px-5 xs:px-6 sm:px-10 md:px-0 md:w-4/5 lg:w-2/3 3xl:max-w-[65rem] md:mx-auto flex flex-col justify-center items-center gap-6 xs:gap-10 sm:gap-6 md:gap-10 xl:gap-8 3xl:gap-12"
+      className="lg:h-[calc(100vh-7rem)] 3xl:h-[45rem] py-10 sm:py-3 lg:py-0 px-5 xs:px-6 sm:px-10 md:px-0 md:w-4/5 lg:w-2/3 3xl:max-w-[97rem] md:mx-auto flex flex-col justify-center items-center gap-6 xs:gap-10 sm:gap-6 md:gap-10 xl:gap-8 3xl:gap-12"
     >
       <motion.div variants={homeVariants.image} className="relative">
         <Image
-          src="/assets/images/twana-profile.png"
+          src="/assets/images/home/twana-profile.png"
           alt="Twana"
           width={160}
           height={160}

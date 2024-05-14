@@ -6,15 +6,7 @@ type Link = {
 export const navbarLinks: Link[] = [
   {
     name: "Home",
-    hash: "#home",
-  },
-  {
-    name: "About",
-    hash: "#about",
-  },
-  {
-    name: "Experience",
-    hash: "#experience",
+    hash: "",
   },
   {
     name: "Projects",
@@ -23,6 +15,10 @@ export const navbarLinks: Link[] = [
   {
     name: "Skills",
     hash: "#skills",
+  },
+  {
+    name: "Experience",
+    hash: "#experience",
   },
   {
     name: "Contact",
