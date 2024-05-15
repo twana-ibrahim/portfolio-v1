@@ -46,49 +46,49 @@ export const projects: Project[] = [
     tags: ["React", "Typescript", "Material UI", "React Hooks", "CSS"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Fast Serve",
     description:
       "A restaurant system for managing categories, foods, employees, orders and ...etc.",
     tags: ["React", "Typescript", "Material UI", "React Hooks", "CSS"],
   },
   {
-    id: 3,
+    id: 5,
     title: "MyTV+ Ads Platform",
     description:
       "Main platform for managing MyTV+ads, brands, campaigns, employees and, ...etc.",
     tags: ["React", "Typescript", "Material UI", "React Hooks", "CSS"],
   },
   {
-    id: 3,
+    id: 6,
     title: "Hotel System",
     description:
       "A Hotel system for the purpose of managing MyTV+in hotels, rooms, employees and ...etc.",
     tags: ["React", "Typescript", "Material UI", "React Hooks", "CSS"],
   },
   {
-    id: 4,
+    id: 7,
     title: "KSC System",
     description:
       "A system for Kurdistan Save the Children organization for the purpose of managing branches, employees, cases, funders, events, etc.",
     tags: ["Angular", "Typescript", "Material UI", "SCSS"],
   },
   {
-    id: 5,
+    id: 8,
     title: "Sale Report System",
     description:
       "An internal system for We Are iQ for the purpose of generating reports on recharges and subscriptions for specific regions.",
     tags: ["Angular", "Typescript", "Material UI", "SCSS"],
   },
   {
-    id: 6,
+    id: 9,
     title: "Authentication System",
     description:
       "A system for managing login/registration, roles, permissions for multiple internal systems.",
     tags: ["Angular", "Typescript", "Material UI", "SCSS"],
   },
   {
-    id: 7,
+    id: 10,
     title: "Mashqi Hawina",
     description:
       "A web application to help the 3rd and 4th stage to find a good place to do their summer training. It was Myteam's last year's project at university, and We got Excellent.",
