@@ -1,7 +1,10 @@
 import { IconType } from "react-icons";
 import { BiLogoRedux } from "react-icons/bi";
 import {
+  SiAngular,
   SiBitbucket,
+  SiBootstrap,
+  SiChakraui,
   SiCss3,
   SiFigma,
   SiGit,
@@ -50,76 +53,91 @@ export const skills: Skill[] = [
   },
   {
     id: 5,
-    label: "HTML",
-    Icon: SiHtml5,
+    label: "Angular",
+    Icon: SiAngular,
   },
   {
     id: 6,
-    label: "CSS",
-    Icon: SiCss3,
-  },
-  {
-    id: 7,
-    label: "Sass",
-    Icon: SiSass,
-  },
-  {
-    id: 8,
-    label: "Tailwind CSS",
-    Icon: SiTailwindcss,
-  },
-  {
-    id: 9,
-    label: "Material UI",
-    Icon: SiMui,
-  },
-  {
-    id: 10,
     label: "Redux",
     Icon: BiLogoRedux,
   },
   {
+    id: 7,
+    label: "HTML",
+    Icon: SiHtml5,
+  },
+  {
+    id: 8,
+    label: "CSS",
+    Icon: SiCss3,
+  },
+  {
+    id: 9,
+    label: "Sass",
+    Icon: SiSass,
+  },
+  {
+    id: 10,
+    label: "Tailwind CSS",
+    Icon: SiTailwindcss,
+  },
+  {
     id: 11,
+    label: "Material UI",
+    Icon: SiMui,
+  },
+  {
+    id: 12,
+    label: "Chakra UI",
+    Icon: SiChakraui,
+  },
+  {
+    id: 13,
+    label: "Bootstrap",
+    Icon: SiBootstrap,
+  },
+  {
+    id: 14,
     label: "Framer Motion",
     Icon: TbBrandFramerMotion,
   },
   {
-    id: 12,
+    id: 15,
     label: "Jest",
     Icon: SiJest,
   },
   {
-    id: 13,
+    id: 16,
     label: "React Testing Library",
     Icon: SiTestinglibrary,
   },
   {
-    id: 14,
+    id: 17,
     label: "Git",
     Icon: SiGit,
   },
   {
-    id: 15,
+    id: 18,
     label: "Github",
     Icon: SiGithub,
   },
   {
-    id: 16,
+    id: 19,
     label: "Bitbucket",
     Icon: SiBitbucket,
   },
   {
-    id: 17,
+    id: 20,
     label: "Jira",
     Icon: SiJira,
   },
   {
-    id: 18,
+    id: 21,
     label: "Figma",
     Icon: SiFigma,
   },
   {
-    id: 19,
+    id: 22,
     label: "Linux",
     Icon: SiLinux,
   },
