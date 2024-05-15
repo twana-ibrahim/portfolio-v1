@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
@@ -9,10 +10,20 @@ import {
   largeScreenMenuVariants,
 } from "@/shared/constants/navbar";
 import useWindowSize from "@/shared/hooks/useWindowSize";
+import {
+  ActiveSectionContext,
+  ActiveSectionContextType,
+} from "@/shared/contexts/ActiveSection";
 
 const LargeScreenMenu = () => {
   const { width } = useWindowSize();
   const { theme } = useTheme();
+
+  const { activeSection, setActiveSection } = useContext(
+    ActiveSectionContext
+  ) as ActiveSectionContextType;
+
+  const onLinkClick = (name: string) => () => setActiveSection(name);
 
   const isDarkMode = theme === "dark";
 
@@ -44,7 +55,10 @@ const LargeScreenMenu = () => {
           >
             <Link
               href={link.hash}
-              className="xl:text-xl 2xl:text-lg 3xl:text-2xl text-gray-500 hover:text-brand hover:font-medium"
+              className={`xl:text-xl 2xl:text-lg 3xl:text-2xl text-gray-500 hover:text-brand/85 hover:font-medium ${
+                link?.name === activeSection ? "!text-brand font-semibold" : ""
+              }`}
+              onClick={onLinkClick(link?.name)}
             >
               {link.name}
             </Link>

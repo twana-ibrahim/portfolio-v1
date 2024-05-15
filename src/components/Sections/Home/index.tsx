@@ -11,13 +11,18 @@ import { HiDownload } from "react-icons/hi";
 import { homeVariants } from "@/shared/constants/home";
 import { differenceInCalendarYears } from "date-fns/differenceInCalendarYears";
 import AnimatedText from "@/components/AnimatedText";
+import { useSectionInView } from "@/shared/hooks/useSectionInView";
 
 const Home = () => {
+  const { ref } = useSectionInView("Home");
+
   const today = new Date();
   const startedDate = new Date("2020-09-01");
 
   return (
     <motion.section
+      id="home"
+      ref={ref}
       initial="initial"
       animate="animate"
       transition={{ staggerChildren: 3 }}

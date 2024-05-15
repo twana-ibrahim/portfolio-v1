@@ -5,6 +5,7 @@ import "@/styles/globals.css";
 import ThemeProvider from "@/shared/providers/Theme";
 import Navbar from "@/components/Navbar";
 import PWAModal from "@/components/Modals/PWA";
+import ActiveSectionContextProvider from "@/shared/contexts/ActiveSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="!scroll-smooth">
       <body
         className={`${inter.className} w-screen h-screen overflow-hidden bg-gradient-to-b from-secondary to-ternary to-70%`}
       >
@@ -43,8 +44,10 @@ export default function RootLayout({
           {/* <PWAModal /> */}
 
           <div className="w-full h-full overflow-auto pt-28 pb-10">
-            <Navbar />
-            <div>{children}</div>
+            <ActiveSectionContextProvider>
+              <Navbar />
+              <div>{children}</div>
+            </ActiveSectionContextProvider>
           </div>
         </ThemeProvider>
       </body>
