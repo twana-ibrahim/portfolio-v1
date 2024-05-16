@@ -1,14 +1,17 @@
-Color pallets:
+# Color pallets:
+
+# brand color:
+
+- #fb6d48
 
 # light:
 
+- #333a73
 - #eff6ff
 - #fee2e2
-- #ffffff
 
 # dark:
 
-- #7077A1
+- #ffffff
 - #424769
-- #2D3250
-- #F6B17A
+- #35155d
