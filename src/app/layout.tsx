@@ -35,10 +35,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // TODO: fix the bg
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} w-screen h-screen overflow-hidden bg-gradient-to-b from-secondary to-ternary to-70%`}
+        className={`${inter.className} bg-gradient-to-b from-secondary to-ternary to-70%`}
       >
         <ThemeProvider>
           {/* <PWAModal /> */}
