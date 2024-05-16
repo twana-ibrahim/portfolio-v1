@@ -2,6 +2,7 @@ import Home from "@/components/Sections/Home";
 import Projects from "@/components/Sections/Projects";
 import SectionDivider from "@/components/SectionDivider";
 import Skills from "@/components/Sections/Skills";
+import Experiences from "@/components/Sections/Experiences";
 
 export default function Main() {
   return (
@@ -11,6 +12,10 @@ export default function Main() {
       <Projects />
       <SectionDivider />
       <Skills />
+      <SectionDivider />
+      <Experiences />
+
+      <div className="h-[50rem]" />
     </main>
   );
 }
