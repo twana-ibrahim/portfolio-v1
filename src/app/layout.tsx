@@ -35,14 +35,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // TODO: fix the bg
   return (
     <html lang="en" className="!scroll-smooth">
       <body className={`${inter.className} relative`}>
         <ThemeProvider>
           {/* <PWAModal /> */}
 
-          <div className="fixed inset-0 -z-10 w-screen h-screen bg-gradient-to-b from-secondary to-ternary to-70%" />
+          <div className="fixed inset-0 -z-50 w-screen h-screen bg-gradient-to-b from-secondary to-ternary to-70%" />
 
           <div className="w-full h-full overflow-auto pt-28 pb-10">
             <ActiveSectionContextProvider>
