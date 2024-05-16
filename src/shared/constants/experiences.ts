@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { FaGraduationCap } from "react-icons/fa";
 import { LuBrainCircuit } from "react-icons/lu";
 import { MdWorkOutline } from "react-icons/md";
 
@@ -21,8 +22,27 @@ export type Experience = {
 export const experiences: Experience[] = [
   {
     id: 1,
+    title: "Software Engineering",
+    company: { name: "Salahaddin University" },
+    date: "October 2017 - May 2021",
+    location: "Erbil",
+    description:
+      "Optimizing the user experience. Developing and maintaining the user interface. Implementingfully responsive design.",
+    skills: [
+      "Problem Solving",
+      "Project Management",
+      "Programming",
+      "Mathematics",
+      "Database",
+      "Network",
+      "IT",
+    ],
+    Icon: FaGraduationCap,
+  },
+  {
+    id: 2,
     title: "Frontend Developer",
-    company: { name: "University Project" },
+    company: { name: "Salahaddin University" },
     date: "October 2020 - May 2021",
     location: "Erbil",
     description:
@@ -31,7 +51,7 @@ export const experiences: Experience[] = [
     Icon: LuBrainCircuit,
   },
   {
-    id: 2,
+    id: 3,
     title: "Frontend Developer",
     company: { name: "iQ Group", url: "https://iq.group" },
     date: "October 2021 - September 2022",
@@ -42,7 +62,7 @@ export const experiences: Experience[] = [
     Icon: MdWorkOutline,
   },
   {
-    id: 3,
+    id: 4,
     title: "Frontend Developer",
     company: { name: "Gateway ICT", url: "https://the-gw.com" },
     date: "September 2022 - March 2024",
@@ -53,7 +73,7 @@ export const experiences: Experience[] = [
     Icon: MdWorkOutline,
   },
   {
-    id: 4,
+    id: 5,
     title: "Frontend Developer",
     company: { name: "Freelancer" },
     date: "January 2023 - PRESENT",
@@ -64,7 +84,7 @@ export const experiences: Experience[] = [
     Icon: MdWorkOutline,
   },
   {
-    id: 5,
+    id: 6,
     title: "Frontend Developer",
     company: { name: "Fastlink Telecom", url: "https://fast-link.com" },
     date: "March 2024 - Present",
