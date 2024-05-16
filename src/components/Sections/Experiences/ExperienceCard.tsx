@@ -49,7 +49,7 @@ const ExperienceCard = (props: Experience) => {
         {skills?.map((skill) => (
           <li
             key={skill}
-            className="px-2 bg-brand/15 border border-brand rounded-full shadow-md"
+            className="flex justify-center items-center h-6 px-2 text-white bg-brand border border-brand rounded-full shadow-md"
           >
             <span className="text-xs md:text-sm 3xl:text-base font-medium">
               {skill}

@@ -14,8 +14,6 @@ export default function Main() {
       <Skills />
       <SectionDivider />
       <Experiences />
-
-      <div className="h-[50rem]" />
     </main>
   );
 }
