@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
-import { FaGraduationCap } from "react-icons/fa";
+import { LuBrainCircuit } from "react-icons/lu";
+import { MdWorkOutline } from "react-icons/md";
 
 type Company = {
   name: string;
@@ -21,24 +22,24 @@ export const experiences: Experience[] = [
   {
     id: 1,
     title: "Frontend Developer",
-    company: { name: "Fastlink Telecom", url: "https://fast-link.com" },
-    date: "March 2024 - Present",
-    location: "Erbil - Remotely",
+    company: { name: "University Project" },
+    date: "October 2020 - May 2021",
+    location: "Erbil",
     description:
-      "Working with a team responsible for developing new projects or adding new features for the current projects.",
-    skills: ["React", "Typescript", "Material UI"],
-    Icon: FaGraduationCap,
+      "Optimizing the user experience. Developing and maintaining the user interface. Implementingfully responsive design.",
+    skills: ["React", "Javascript", "Tailwind CSS"],
+    Icon: LuBrainCircuit,
   },
   {
     id: 2,
     title: "Frontend Developer",
-    company: { name: "Freelancer" },
-    date: "January 2023 - PRESENT",
-    location: "Kurdistan - Remotely",
+    company: { name: "iQ Group", url: "https://iq.group" },
+    date: "October 2021 - September 2022",
+    location: "Sulaymaniyah",
     description:
       "Working with a team responsible for developing new projects or adding new features for the current projects.",
-    skills: ["React", "Typescript", "Material UI"],
-    Icon: FaGraduationCap,
+    skills: ["Angular", "Typescript", "Material", "SCSS"],
+    Icon: MdWorkOutline,
   },
   {
     id: 3,
@@ -49,29 +50,29 @@ export const experiences: Experience[] = [
     description:
       "Working with a team responsible for developing new projects or adding new features for the current projects.",
     skills: ["React", "Javascript", "Typescript", "Material UI"],
-    Icon: FaGraduationCap,
+    Icon: MdWorkOutline,
   },
   {
     id: 4,
     title: "Frontend Developer",
-    company: { name: "iQ Group", url: "https://iq.group" },
-    date: "October 2021 - September 2022",
-    location: "Sulaymaniyah",
+    company: { name: "Freelancer" },
+    date: "January 2023 - PRESENT",
+    location: "Kurdistan - Remotely",
     description:
       "Working with a team responsible for developing new projects or adding new features for the current projects.",
-    skills: ["Angular", "Typescript", "Material", "SCSS"],
-    Icon: FaGraduationCap,
+    skills: ["React", "Typescript", "Material UI"],
+    Icon: MdWorkOutline,
   },
   {
     id: 5,
     title: "Frontend Developer",
-    company: { name: "University Project" },
-    date: "October 2020 - May 2021",
-    location: "Erbil",
+    company: { name: "Fastlink Telecom", url: "https://fast-link.com" },
+    date: "March 2024 - Present",
+    location: "Erbil - Remotely",
     description:
-      "Optimizing the user experience. Developing and maintaining the user interface. Implementingfully responsive design.",
-    skills: ["React", "Javascript", "Tailwind CSS"],
-    Icon: FaGraduationCap,
+      "Working with a team responsible for developing new projects or adding new features for the current projects.",
+    skills: ["React", "Typescript", "Material UI"],
+    Icon: MdWorkOutline,
   },
 ];
 

@@ -33,7 +33,7 @@ const Experiences = () => {
           style={{ scaleY: scrollYProgress }}
         />
 
-        <ul className="flex flex-col gap-6">
+        <ul className="flex flex-col gap-10">
           {experiences?.map((experience) => (
             <ExperienceCard {...experience} key={experience?.id} />
           ))}
