@@ -173,13 +173,21 @@ const Home = () => {
           <img
             src={image}
             alt="test"
-            className="bg-cove h-full w-full aspect-square"
+            className="bg-cover object-cover h-full w-full aspect-square"
           />
         )}
-        <button id="capture" className="mt-20" onClick={handleCapture}>
+        <button
+          id="capture"
+          className="text-brand mt-20"
+          onClick={handleCapture}
+        >
           Capture
         </button>
-        <button id="capture" className="mt-20 ml-20" onClick={openCam}>
+        <button
+          id="capture"
+          className="text-brand mt-20 ml-20"
+          onClick={openCam}
+        >
           Open Camera
         </button>
       </div>
