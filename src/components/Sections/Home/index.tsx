@@ -170,11 +170,7 @@ const Home = () => {
         <video className="w-full" ref={camRef} id="player" autoPlay />
         <canvas id="canvas" ref={canvasRef} className="hidden w-full h-full" />
         {image && (
-          <img
-            src={image}
-            alt="test"
-            className="bg-cover object-cover h-full w-full aspect-square"
-          />
+          <img src={image} alt="test" className="h-full w-full aspect-square" />
         )}
         <button
           id="capture"
