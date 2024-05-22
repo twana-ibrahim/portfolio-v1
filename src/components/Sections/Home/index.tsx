@@ -64,7 +64,8 @@ const Home = () => {
       <motion.div className="flex flex-col lg:flex-row items-center gap-4 md:gap-6">
         <motion.div
           className="flex items-center flex-col md:flex-row gap-4 md:gap-6"
-          variants={homeVariants.linksContainer(1)}
+          variants={homeVariants.linksContainer}
+          custom={1}
           initial="initial"
           animate="animate"
         >
@@ -91,7 +92,8 @@ const Home = () => {
 
         <motion.div
           className="flex items-center gap-4 md:gap-6"
-          variants={homeVariants.linksContainer(2)}
+          variants={homeVariants.linksContainer}
+          custom={2}
           initial="initial"
           animate="animate"
         >

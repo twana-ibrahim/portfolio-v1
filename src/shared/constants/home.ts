@@ -28,11 +28,11 @@ export const homeVariants = {
       },
     },
   },
-  linksContainer: (i = 1) => ({
-    animate: {
+  linksContainer: {
+    animate: (i = 1) => ({
       transition: { staggerChildren: 0.5, delayChildren: i * 1 },
-    },
-  }),
+    }),
+  },
   link: {
     initial: {
       x: 100,

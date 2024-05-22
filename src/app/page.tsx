@@ -3,6 +3,7 @@ import Projects from "@/components/Sections/Projects";
 import SectionDivider from "@/components/SectionDivider";
 import Skills from "@/components/Sections/Skills";
 import Experiences from "@/components/Sections/Experiences";
+import Contact from "@/components/Sections/Contact";
 
 export default function Main() {
   return (
@@ -14,6 +15,8 @@ export default function Main() {
       <Skills />
       <SectionDivider />
       <Experiences />
+      <SectionDivider />
+      <Contact />
     </main>
   );
 }
