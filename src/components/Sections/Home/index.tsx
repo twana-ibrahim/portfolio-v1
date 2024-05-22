@@ -45,25 +45,18 @@ const Home = () => {
 
     if (camRef.current) {
       const cam = camRef.current;
-      context.drawImage(
-        cam,
-        0,
-        0,
-        canvas.width,
-        cam.videoHeight / (cam.videoWidth / canvas.width)
-      );
+      context.drawImage(cam, 0, 0, canvas.width, canvas.height);
 
       const imageDataURL = canvas.toDataURL("image/png");
 
       setImage(imageDataURL);
-      console.log(imageDataURL);
 
       cam.srcObject?.getVideoTracks().forEach((track: any) => {
         track.stop();
       });
 
       cam.style.display = "none";
-      canvas.style.display = "block";
+      // canvas.style.display = "block";
 
       setOpenCamera(false);
     }
@@ -173,21 +166,20 @@ const Home = () => {
         </motion.div>
       </motion.div>
 
-      <div className="mb-[20rem]">
+      <div className="mb-[20rem] bg-white">
         <video className="w-full" ref={camRef} id="player" autoPlay />
-        <canvas id="canvas" ref={canvasRef} className="hidden" />
-        <button
-          id="capture"
-          className="bg-red-600 mt-20"
-          onClick={handleCapture}
-        >
+        <canvas id="canvas" ref={canvasRef} className="hidden w-full h-full" />
+        {image && (
+          <img
+            src={image}
+            alt="test"
+            className="bg-cove h-full w-full aspect-square"
+          />
+        )}
+        <button id="capture" className="mt-20" onClick={handleCapture}>
           Capture
         </button>
-        <button
-          id="capture"
-          className="bg-red-600 mt-20 ml-20"
-          onClick={openCam}
-        >
+        <button id="capture" className="mt-20 ml-20" onClick={openCam}>
           Open Camera
         </button>
       </div>
