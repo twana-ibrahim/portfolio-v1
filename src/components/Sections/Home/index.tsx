@@ -12,12 +12,66 @@ import { homeVariants } from "@/shared/constants/home";
 import { differenceInCalendarYears } from "date-fns/differenceInCalendarYears";
 import AnimatedText from "@/components/AnimatedText";
 import { useSectionInView } from "@/shared/hooks/useSectionInView";
+import { useEffect, useRef, useState } from "react";
 
 const Home = () => {
   const { ref } = useSectionInView("Home");
 
   const today = new Date();
   const startedDate = new Date("2020-09-01");
+
+  const canvasRef = useRef<any>(null);
+  const camRef = useRef<any>(null);
+  const [openCamera, setOpenCamera] = useState(false);
+  const [image, setImage] = useState(null);
+
+  const openCam = () => {
+    setOpenCamera((prev) => !prev);
+  };
+
+  const initializeMedia = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      camRef.current.srcObject = stream;
+      camRef.current.style.display = "block";
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleCapture = () => {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext("2d");
+
+    if (camRef.current) {
+      const cam = camRef.current;
+      context.drawImage(
+        cam,
+        0,
+        0,
+        canvas.width,
+        cam.videoHeight / (cam.videoWidth / canvas.width)
+      );
+
+      const imageDataURL = canvas.toDataURL("image/png");
+
+      setImage(imageDataURL);
+      console.log(imageDataURL);
+
+      cam.srcObject?.getVideoTracks().forEach((track: any) => {
+        track.stop();
+      });
+
+      cam.style.display = "none";
+      canvas.style.display = "block";
+
+      setOpenCamera(false);
+    }
+  };
+
+  useEffect(() => {
+    if (openCamera) initializeMedia();
+  }, [openCamera]);
 
   return (
     <motion.section
@@ -118,6 +172,25 @@ const Home = () => {
           </motion.div>
         </motion.div>
       </motion.div>
+
+      <div className="mb-[20rem]">
+        <video className="w-full" ref={camRef} id="player" autoPlay />
+        <canvas id="canvas" ref={canvasRef} className="hidden" />
+        <button
+          id="capture"
+          className="bg-red-600 mt-20"
+          onClick={handleCapture}
+        >
+          Capture
+        </button>
+        <button
+          id="capture"
+          className="bg-red-600 mt-20 ml-20"
+          onClick={openCam}
+        >
+          Open Camera
+        </button>
+      </div>
     </motion.section>
   );
 };
