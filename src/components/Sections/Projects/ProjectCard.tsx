@@ -16,7 +16,8 @@ const ProjectCard = (props: Props) => {
   return (
     <motion.section
       className="group bg-secondary/25 hover:bg-ternary/25 transition relative min-h-60 max-h-72 sm:min-h-52 sm:max-h-64 md:min-h-60 md:max-h-80 2xl:min-h-60 2xl:max-h-60 3xl:min-h-48 3xl:max-h-56 overflow-hidden grid md:grid-cols-5 gap-6 p-4 border border-brand shadow rounded-md"
-      variants={projectsVariants(id)}
+      variants={projectsVariants}
+      custom={id}
       initial="initial"
       whileInView="whileInView"
     >

@@ -96,18 +96,19 @@ export const projects: Project[] = [
   },
 ];
 
-export const projectsVariants = (i = 1) => ({
-  initial: {
+export const projectsVariants = {
+  initial: (i = 1) => ({
     scale: 0,
     x: i % 2 === 0 ? 100 : -100,
     opacity: 0,
-  },
+  }),
   whileInView: {
     scale: 1,
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 1,
+      ease: "linear",
     },
   },
-});
+};

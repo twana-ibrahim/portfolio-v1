@@ -26,6 +26,9 @@ const config: Config = {
         sm: "540px",
         "3xl": "1650px",
       },
+      boxShadow: {
+        input: "0 0 10px -1px rgb(var(--color-brand))",
+      },
     },
   },
   plugins: [],
