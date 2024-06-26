@@ -7,16 +7,20 @@ import { FaPaperPlane } from "react-icons/fa";
 import SectionTitle from "@/components/SectionTitle";
 import InputContainer from "@/components/InputContainer";
 
-import { useSectionInView } from "@/shared/hooks/useSectionInView";
+import { sendEmail } from "@/app/actions/contact";
 import { contactFormIsValidation } from "@/lib/validations";
+import { useSectionInView } from "@/shared/hooks/useSectionInView";
 import {
   ContactForm,
   contactFormInitialValues,
   contactVariants,
 } from "@/shared/constants/contact";
+import useSnackbars from "@/shared/hooks/useSnackbar";
 
 const Contact = () => {
   const { ref } = useSectionInView("Contact");
+
+  const showSnackbar = useSnackbars();
 
   const [form, setForm] = useState<ContactForm>(contactFormInitialValues);
 
@@ -42,7 +46,17 @@ const Contact = () => {
     return { ...contactFormIsValidation(form), isDirtyForm };
   }, [form]);
 
-  // TODO: complete sending message functionality
+  const formAction = async (formData: FormData) => {
+    await sendEmail(formData)
+      .then(() => {
+        setForm(contactFormInitialValues);
+        showSnackbar("I have recieved your message, thank you!");
+      })
+      .catch(() => {
+        showSnackbar("There's something wrong! please try again!", "error");
+      });
+  };
+
   return (
     <motion.section
       id="contact"
@@ -75,6 +89,7 @@ const Contact = () => {
           custom={2}
           className="flex flex-col gap-y-5 lg:gap-y-4 3xl:gap-y-6"
           noValidate
+          action={formAction}
         >
           <InputContainer error={form?.email?.isDirty ? errors?.email : ""}>
             <input
@@ -85,6 +100,7 @@ const Contact = () => {
               minLength={1}
               maxLength={50}
               required
+              value={form.email.value}
               className={`h-10 md:h-12 2xl:h-14 px-2 xl:px-4 py-1 xl:py-2 rounded-lg 2xl:text-lg 3xl:text-xl border border-brand/50 focus:border-brand focus:outline-none focus:shadow-input ${
                 errors?.email
                   ? "border-red-600 focus:border-red-600 focus:shadow-red-600"
@@ -95,11 +111,13 @@ const Contact = () => {
 
           <InputContainer error={form?.message?.isDirty ? errors?.message : ""}>
             <textarea
+              onChange={onChangeInput}
+              name="message"
               rows={7}
               placeholder="Write your message*"
-              onChange={onChangeInput}
               minLength={1}
               required
+              value={form.message.value}
               className={`resize-none px-2 xl:px-4 py-1 xl:py-2 rounded-lg 2xl:text-lg 3xl:text-xl border border-brand/50 focus:border-brand focus:outline-none focus:shadow-input ${
                 errors?.message
                   ? "border-red-600 focus:border-red-600 focus:shadow-red-600"
