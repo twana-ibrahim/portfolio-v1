@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import PWAModal from "@/components/Modals/PWA";
 import ActiveSectionContextProvider from "@/shared/contexts/ActiveSection";
 import SnackbarProvider from "@/shared/contexts/SnackbarProvider";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,6 +50,7 @@ export default function RootLayout({
               <ActiveSectionContextProvider>
                 <Navbar />
                 <div>{children}</div>
+                <Footer />
               </ActiveSectionContextProvider>
             </SnackbarProvider>
           </div>
