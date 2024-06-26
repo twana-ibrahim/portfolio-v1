@@ -6,6 +6,7 @@ import ThemeProvider from "@/shared/providers/Theme";
 import Navbar from "@/components/Navbar";
 import PWAModal from "@/components/Modals/PWA";
 import ActiveSectionContextProvider from "@/shared/contexts/ActiveSection";
+import SnackbarProvider from "@/shared/contexts/SnackbarProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,10 +45,12 @@ export default function RootLayout({
           <div className="fixed inset-0 -z-50 w-screen h-screen bg-gradient-to-b from-secondary to-ternary to-70%" />
 
           <div className="w-full h-full overflow-auto pt-28 pb-10">
-            <ActiveSectionContextProvider>
-              <Navbar />
-              <div>{children}</div>
-            </ActiveSectionContextProvider>
+            <SnackbarProvider>
+              <ActiveSectionContextProvider>
+                <Navbar />
+                <div>{children}</div>
+              </ActiveSectionContextProvider>
+            </SnackbarProvider>
           </div>
         </ThemeProvider>
       </body>
