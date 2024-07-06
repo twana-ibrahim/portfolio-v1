@@ -33,6 +33,8 @@ export const viewport: Viewport = {
   themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
 };
 
+// FIXME: adding multi language
+
 export default function RootLayout({
   children,
 }: Readonly<{
