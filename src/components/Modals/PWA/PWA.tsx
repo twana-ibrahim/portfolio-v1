@@ -9,7 +9,11 @@ const PWAModal = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      if (isInstalled) {
+      const isInstallModalShown = JSON.parse(
+        localStorage.getItem("isInstallModalShown") || "false"
+      );
+
+      if (isInstalled || isInstallModalShown) {
         const handleInstalled = () => {
           setIsInstalled(true);
           setPrompt(null);
@@ -43,6 +47,8 @@ const PWAModal = () => {
 
   const handleClose = () => {
     setShowInstallModal(false);
+
+    localStorage.setItem("isInstallModalShown", "true");
   };
 
   const handleInstall = () => {
