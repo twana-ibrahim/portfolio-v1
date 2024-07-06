@@ -14,6 +14,7 @@ import {
   ActiveSectionContext,
   ActiveSectionContextType,
 } from "@/shared/contexts/ActiveSection";
+import ThemeToggle from "../ThemeToggle";
 
 const LargeScreenMenu = () => {
   const { width } = useWindowSize();
@@ -55,7 +56,7 @@ const LargeScreenMenu = () => {
           >
             <Link
               href={link.hash}
-              className={`xl:text-xl 2xl:text-lg 3xl:text-2xl text-gray-500 hover:text-brand/85 hover:font-medium ${
+              className={`xl:text-xl 2xl:text-lg 3xl:text-2xl text-gray-500 dark:text-white hover:font-medium ${
                 link?.name === activeSection ? "!text-brand font-semibold" : ""
               }`}
               onClick={onLinkClick(link?.name)}
@@ -64,6 +65,8 @@ const LargeScreenMenu = () => {
             </Link>
           </motion.li>
         ))}
+
+        <ThemeToggle />
       </motion.ul>
     </motion.div>
   );

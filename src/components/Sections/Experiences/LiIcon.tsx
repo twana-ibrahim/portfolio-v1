@@ -36,7 +36,7 @@ const LiIcon = forwardRef((_, ref) => {
           cx="80"
           cy="50"
           r="35"
-          className="stroke-[5px] fill-white"
+          className="stroke-[5px] fill-white dark:fill-ternary/70"
           style={{
             pathLength: scrollYProgress,
           }}

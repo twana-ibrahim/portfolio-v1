@@ -33,7 +33,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Fastlink Website",
     description:
-      "Fastlink branding wesbsite to show their services, offers, offices, showrooms, history, ...etc.",
+      "Fastlink branding website to show their services, offers, offices, showrooms, history, ...etc.",
     url: "https://fastlink-website-demo.vercel.app/",
     image: FastlinkImage,
     tags: ["React", "Next", "Javascript", "SCSS"],
@@ -98,17 +98,18 @@ export const projects: Project[] = [
 
 export const projectsVariants = {
   initial: (i = 1) => ({
-    scale: 0,
+    scale: 0.5,
     x: i % 2 === 0 ? 100 : -100,
     opacity: 0,
   }),
   whileInView: {
     scale: 1,
-    x: 0,
     opacity: 1,
+    x: 0,
     transition: {
+      // ease: "linear",
+      restSpeed: 0.05,
       duration: 1,
-      ease: "linear",
     },
   },
 };
