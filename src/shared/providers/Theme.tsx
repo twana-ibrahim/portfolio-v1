@@ -3,8 +3,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { ReactNode } from "react";
 
 const ThemeProvider = ({ children }: { children: ReactNode }) => (
-  // FIXME: change default to system
-  <NextThemesProvider attribute="class" defaultTheme="light" enableSystem>
+  <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
     {children}
   </NextThemesProvider>
 );
