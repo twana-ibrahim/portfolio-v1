@@ -22,7 +22,7 @@ const Skills = () => {
         {skills?.map(({ id, label, Icon }) => (
           <motion.li
             key={id}
-            className="flex items-center gap-3 px-4 py-2 bg-brand/15 border border-brand rounded-full shadow-lg"
+            className="flex items-center gap-3 px-4 py-2 bg-brand/15 dark:bg-brand border border-brand rounded-full shadow-lg"
             variants={skillsVariants}
             initial="initial"
             whileInView="animate"

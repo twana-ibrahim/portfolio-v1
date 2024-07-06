@@ -80,7 +80,7 @@ const SmallScreenMenu = () => {
               >
                 <Link
                   href={link.hash}
-                  className={`text-gray-500 hover:text-primary ${
+                  className={`text-gray-500 dark:text-white hover:text-primary ${
                     link?.name === activeSection
                       ? "!text-brand font-semibold"
                       : ""

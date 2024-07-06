@@ -14,7 +14,7 @@ const ExperienceCard = (props: Experience) => {
   return (
     <motion.li
       ref={ref}
-      className="relative bg-gray-50/75 border border-brand p-4 rounded-lg shadow-lg max-w-[30rem] 3xl:max-w-[35rem] flex flex-col"
+      className="relative bg-gray-50/75 dark:bg-ternary/70 border border-brand p-4 rounded-lg shadow-lg max-w-[30rem] 3xl:max-w-[35rem] flex flex-col"
       variants={experienceVariants.card}
       initial="initial"
       whileInView="animate"
