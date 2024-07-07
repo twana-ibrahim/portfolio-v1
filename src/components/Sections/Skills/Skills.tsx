@@ -28,8 +28,12 @@ const Skills = () => {
             whileInView="animate"
             custom={id}
           >
-            {Icon && <Icon className="text-primary text-xl 3xl:text-2xl" />}
-            <span className="text-lg 3xl:text-xl">{label}</span>
+            {Icon && (
+              <Icon className="text-primary dark:text-ternary text-xl 3xl:text-2xl" />
+            )}
+            <span className="text-lg 3xl:text-xl text-primary dark:text-ternary">
+              {label}
+            </span>
           </motion.li>
         ))}
       </ul>

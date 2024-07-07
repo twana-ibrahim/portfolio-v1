@@ -8,12 +8,19 @@ import { motion } from "framer-motion";
 import { themeToggleIconSize } from "@/shared/constants/theme";
 import useWindowSize from "@/shared/hooks/useWindowSize";
 import { largeScreenMenuVariants } from "@/shared/constants/navbar";
+import { useEffect } from "react";
 
 const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, systemTheme } = useTheme();
   const { screen } = useWindowSize();
 
   const isDarkMode = theme === "dark";
+
+  useEffect(() => {
+    if (theme === "system" && systemTheme) setTheme(systemTheme);
+    else setTheme(theme!);
+  }, [setTheme, systemTheme, theme]);
+
   return (
     <motion.button
       onClick={() => {

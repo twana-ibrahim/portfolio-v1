@@ -3,7 +3,7 @@ type Props = {
   size?: number;
 };
 
-const Logo = ({ color = "#fff", size = 20 }: Props) => {
+const Logo = ({ color = "current-color", size = 20 }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

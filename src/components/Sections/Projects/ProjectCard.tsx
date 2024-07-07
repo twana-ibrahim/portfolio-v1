@@ -30,14 +30,14 @@ const ProjectCard = (props: Props) => {
               <Link
                 href={url}
                 target="_blank"
-                className="p-1 rounded-md text-xl bg-brand hover:bg-ternary text-white hover:text-brand border border-brand transition"
+                className="p-1 rounded-md text-xl bg-brand hover:bg-ternary text-white dark:text-ternary hover:text-brand border border-brand transition"
               >
                 <TbExternalLink />
               </Link>
             ) : (
               <button
                 disabled
-                className="p-1 rounded-md text-xl bg-brand/60 text-white border border-brand"
+                className="p-1 rounded-md text-xl bg-brand/60 text-white dark:text-ternary border border-brand"
               >
                 <TbExternalLinkOff />
               </button>
@@ -54,7 +54,7 @@ const ProjectCard = (props: Props) => {
             {tags?.map((tag) => (
               <li
                 key={tag}
-                className="text-[10px] sm:text-xs px-3 py-1 uppercase tracking-wider text-white bg-brand rounded-full"
+                className="text-[10px] sm:text-xs px-3 py-1 uppercase tracking-wider text-white dark:text-ternary dark:font-semibold bg-brand rounded-full"
               >
                 {tag}
               </li>
