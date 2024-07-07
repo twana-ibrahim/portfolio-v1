@@ -8,33 +8,39 @@ const PWAModal = () => {
   const [prompt, setPrompt] = useState<any>(null);
 
   useEffect(() => {
-    const isInstallModalShown = JSON.parse(
-      localStorage.getItem("isInstallModalShown") || "false"
-    );
+    if (typeof window !== "undefined") {
+      const isInstallModalShown = JSON.parse(
+        localStorage.getItem("isInstallModalShown") || "false"
+      );
 
-    if (isInstalled || isInstallModalShown) {
-      const handleInstalled = () => {
-        setIsInstalled(true);
-        setPrompt(null);
-      };
+      if (isInstalled || isInstallModalShown) {
+        const handleInstalled = () => {
+          setIsInstalled(true);
+          setPrompt(null);
+        };
 
-      window.addEventListener("appinstalled", handleInstalled);
+        window.addEventListener("appinstalled", handleInstalled);
 
-      return () => window.removeEventListener("appinstalled", handleInstalled);
-    } else {
-      const handleBeforeInstallPrompt = (e: any) => {
-        e.preventDefault();
-        setPrompt(e);
-        setShowInstallModal(true);
-      };
+        return () =>
+          window.removeEventListener("appinstalled", handleInstalled);
+      } else {
+        const handleBeforeInstallPrompt = (e: any) => {
+          e.preventDefault();
+          setPrompt(e);
+          setShowInstallModal(true);
+        };
 
-      window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-
-      return () =>
-        window.removeEventListener(
+        window.addEventListener(
           "beforeinstallprompt",
           handleBeforeInstallPrompt
         );
+
+        return () =>
+          window.removeEventListener(
+            "beforeinstallprompt",
+            handleBeforeInstallPrompt
+          );
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
