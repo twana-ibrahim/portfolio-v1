@@ -2,7 +2,6 @@
 
 import { useContext, useRef } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import { motion, useCycle } from "framer-motion";
 
 import Logo from "@/components/Logo";
@@ -19,8 +18,6 @@ import {
 } from "@/shared/contexts/ActiveSection";
 
 const SmallScreenMenu = () => {
-  const { theme } = useTheme();
-
   const { activeSection, setActiveSection } = useContext(
     ActiveSectionContext
   ) as ActiveSectionContextType;
@@ -35,10 +32,8 @@ const SmallScreenMenu = () => {
     toggleMenu();
   };
 
-  const isDarkMode = theme === "dark";
-  const burgerMenuClasses = `w-10 h-1 rounded-full origin-left ${
-    isDarkMode ? "bg-white" : "bg-black"
-  }`;
+  const burgerMenuClasses =
+    "w-10 h-1 rounded-full origin-left bg-black dark:bg-white";
 
   return (
     <>
@@ -60,8 +55,8 @@ const SmallScreenMenu = () => {
           initial={{ x: -80 }}
           animate={{ x: 0, transition: { duration: 0.5 } }}
         >
-          <Link href="/">
-            <Logo size={30} color={isDarkMode ? "#fff" : "#000"} />
+          <Link href="/" className="fill-black dark:fill-white">
+            <Logo size={30} />
           </Link>
         </motion.div>
 

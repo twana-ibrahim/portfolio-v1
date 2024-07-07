@@ -72,7 +72,7 @@ const Home = () => {
           <motion.div variants={homeVariants.link} whileHover={{ scale: 1.1 }}>
             <Link
               href="#contact"
-              className="flex items-center gap-3 bg-brand hover:bg-brand/90 border border-brand text-white text-xl md:text-2xl lg:text-lg 3xl:text-2xl rounded-full font-bold px-6 md:px-8 h-12 md:h-16 lg:h-12 3xl:h-16 shadow-sm"
+              className="flex items-center gap-3 bg-brand hover:bg-brand/90 border border-brand text-white dark:text-ternary text-xl md:text-2xl lg:text-lg 3xl:text-2xl rounded-full font-bold px-6 md:px-8 h-12 md:h-16 lg:h-12 3xl:h-16 shadow-sm"
             >
               Contact me here <BsArrowRight className="text-2xl" />
             </Link>

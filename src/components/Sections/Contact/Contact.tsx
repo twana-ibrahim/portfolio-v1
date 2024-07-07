@@ -74,12 +74,12 @@ const Contact = () => {
           custom={1}
           className="text-xl sm:text-2xl md:text-3xl lg:text-2xl xl:text-3xl 3xl:text-4xl font-semibold sm:font-medium relative mx-6 sm:mx-4"
         >
-          <span className="font-bold text-5xl md:text-6xl 3xl:text-7xl absolute -left-6 md:-left-7 -top-3 sm:-top-2 md:-top-3 lg:-top-4">
+          <span className="text-brand font-bold text-5xl md:text-6xl 3xl:text-7xl absolute -left-6 md:-left-7 -top-3 sm:-top-2 md:-top-3 lg:-top-4">
             “
           </span>
           If you have any question in tech area especially in the Web
           development field, do not hesitate to reach out.
-          <span className="font-bold text-5xl md:text-6xl 3xl:text-7xl absolute -bottom-8 md:-bottom-11 lg:-bottom-10 xl:-bottom-11 3xl:-bottom-[52px]">
+          <span className="text-brand font-bold text-5xl md:text-6xl 3xl:text-7xl absolute -bottom-8 md:-bottom-11 lg:-bottom-10 xl:-bottom-11 3xl:-bottom-[52px]">
             ”
           </span>
         </motion.p>
