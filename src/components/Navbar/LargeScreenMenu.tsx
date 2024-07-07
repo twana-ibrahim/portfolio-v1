@@ -32,7 +32,7 @@ const LargeScreenMenu = () => {
       className="fixed top-6 left-1/2 hidden lg:flex items-center px-8 w-[40rem] xl:w-[44rem] 3xl:w-[56rem] h-[3.25rem] xl:h-16 3xl:h-20 border border-brand/40 bg-secondary/80 shadow-lg shadow-brand/5 backdrop-blur-[0.5rem] rounded-full"
     >
       <motion.div variants={largeScreenMenuVariants.item}>
-        <Link href="/" className="fill-black dark:fill-white">
+        <Link href="/" aria-label="logo" className="fill-black dark:fill-white">
           <Logo size={width < 1280 ? 20 : width >= 1650 ? 32 : 28} />
         </Link>
       </motion.div>
@@ -49,6 +49,7 @@ const LargeScreenMenu = () => {
           >
             <Link
               href={link.hash}
+              aria-label={link.name}
               className={`xl:text-xl 2xl:text-lg 3xl:text-2xl text-gray-500 dark:text-white hover:font-medium ${
                 link?.name === activeSection ? "!text-brand font-semibold" : ""
               }`}
