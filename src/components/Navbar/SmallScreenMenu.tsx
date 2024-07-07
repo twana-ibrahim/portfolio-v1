@@ -45,7 +45,7 @@ const SmallScreenMenu = () => {
       )}
 
       <motion.div
-        className="fixed top-0 left-0 flex lg:hidden items-center justify-between px-8 w-full h-20 border border-brand/40 bg-secondary/80 shadow-lg shadow-brand/5 backdrop-blur-[0.5rem]"
+        className="fixed z-20 top-0 left-0 flex lg:hidden items-center justify-between px-8 w-full h-20 border border-brand/40 bg-secondary/80 shadow-lg shadow-brand/5 backdrop-blur-[0.5rem]"
         initial={false}
         animate={isMenuOpen ? "animate" : "initial"}
         custom={height}
@@ -55,7 +55,11 @@ const SmallScreenMenu = () => {
           initial={{ x: -80 }}
           animate={{ x: 0, transition: { duration: 0.5 } }}
         >
-          <Link href="/" className="fill-black dark:fill-white">
+          <Link
+            href="/"
+            aria-label="logo"
+            className="fill-black dark:fill-white"
+          >
             <Logo size={30} />
           </Link>
         </motion.div>
@@ -75,6 +79,7 @@ const SmallScreenMenu = () => {
               >
                 <Link
                   href={link.hash}
+                  aria-label={link.name}
                   className={`text-gray-500 dark:text-white hover:text-primary ${
                     link?.name === activeSection
                       ? "!text-brand font-semibold"

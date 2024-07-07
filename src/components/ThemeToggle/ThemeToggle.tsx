@@ -23,6 +23,7 @@ const ThemeToggle = () => {
 
   return (
     <motion.button
+      name="theme-toggle"
       onClick={() => {
         setTheme(isDarkMode ? "light" : "dark");
       }}
